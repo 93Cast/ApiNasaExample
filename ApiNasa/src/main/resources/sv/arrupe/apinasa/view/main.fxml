@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sv.arrupe.apinasa.controller.MainController">
+
+    <top>
+        <VBox spacing="10" style="-fx-padding:20; -fx-background-color:#0b3d91;">
+            <Label text="NASA Astronomy Picture of the Day"
+                   style="-fx-text-fill:white; -fx-font-size:22; -fx-font-weight:bold;"/>
+
+            <HBox spacing="10">
+                <DatePicker fx:id="datePicker"/>
+                <Button text="Buscar" onAction="#buscarImagen"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true">
+            <VBox spacing="20" style="-fx-padding:20;" alignment="TOP_CENTER">
+
+                <Label fx:id="lblTitulo"
+                       style="-fx-font-size:22; -fx-font-weight:bold;"
+                       wrapText="true"/>
+
+                <ImageView fx:id="imageView"
+                           fitWidth="700"
+                           fitHeight="450"
+                           preserveRatio="true"
+                           smooth="true"/>
+
+                <Label fx:id="lblDescripcion"
+                       wrapText="true"
+                       maxWidth="700"/>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+
+
+</BorderPane>
